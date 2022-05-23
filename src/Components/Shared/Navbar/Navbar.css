@@ -1,0 +1,28 @@
+.signoutbtn {
+    background-image: linear-gradient(to right, #ffbb00, #ff4c16);
+    border: none;
+    color: white;
+}
+
+.signoutbtn:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #ffbb00, #ff5f2e);
+
+}
+
+.link {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #505050;
+    transition: color ease-in-out 300ms;
+}
+
+
+.active-link {
+
+    text-decoration: none;
+    margin-left: 15px;
+    border-bottom: 2px solid #ff4c16;
+    transition: color ease-in-out 300ms;
+    color: #ff4c16;
+}
