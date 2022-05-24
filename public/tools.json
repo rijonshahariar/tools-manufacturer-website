@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Gallon Dust Extractor",
+        "email": "shahariar.rijon@gmail.com",
+        "price": 300,
+        "quantity": 300,
+        "min-order": 10,
+        "description": "The Gallon Dust Extractor features a brushless motor that is capable of over 100,000 press cycles and requires no scheduled maintenance.",
+        "img": "https://i.ibb.co/TqcKgW0/product-01.jpg",
+        "sold": 0
+    },
+    {
+        "name": "DEWALT Honda GX270",
+        "email": "shahariar.rijon@gmail.com",
+        "price": 450,
+        "quantity": 150,
+        "min-order": 20,
+        "description": "The DEWALT Honda GX270 is a flexible, bring-your-own-screen solution, providing a convenient means to stream.",
+        "img": "https://i.ibb.co/DV6v1fP/product-02.jpg",
+        "sold": 0
+    },
+    {
+        "name": "Beem Laser",
+        "email": "shahariar.rijon@gmail.com",
+        "price": 350,
+        "quantity": 160,
+        "min-order": 20,
+        "description": "With the most advanced LED interface and lighting, the Beem Laser has been upgraded from top to bottom.",
+        "img": "https://i.ibb.co/5LV9k3z/product-17.jpg",
+        "sold": 0
+    }
+]
