@@ -3,7 +3,7 @@ import './BusinessSum.css'
 const BusinessSum = () => {
     return (
         <>
-            <h1 className='text-center mt-5 heading'>MILLIONS BUSINESS TRUST US</h1>
+            <h1 className='text-4xl text-center mt-5 heading'>MILLIONS BUSINESS TRUST US</h1>
             <section id="counts" className="counts">
 
                 <div className="container" data-aos="fade-up">

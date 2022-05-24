@@ -8,6 +8,7 @@ import {
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import './Register.css'
+import useToken from '../../../Hooks/useToken';
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
     const [createUserWithEmailAndPassword, user1, loading, error] =
@@ -15,12 +16,13 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [user] = useAuthState(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token] = useToken(user);
 
     const navigate = useNavigate();
     if (loading || updating) {
         return <Loading></Loading>;
     }
-    if (user1) {
+    if (token) {
         navigate("/");
     }
 

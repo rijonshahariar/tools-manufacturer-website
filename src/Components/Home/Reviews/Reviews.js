@@ -8,7 +8,7 @@ const Reviews = () => {
     return (
         <div className="container mb-5">
             <div className="row justify-content-center">
-                <h1 className="section-title text-center my-5 fw-bold">
+                <h1 className="text-4xl section-title text-center my-5 fw-bold">
                     <span className="d-inline-block">
                         CUSTOMER REVIEWS
                     </span>

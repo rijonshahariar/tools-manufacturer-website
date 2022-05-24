@@ -9,6 +9,7 @@ import {
     useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from '../../../firebase.init'
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
@@ -18,6 +19,7 @@ const Login = () => {
     const [user, loading] = useAuthState(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
+    const [token] = useToken(user);
 
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -25,7 +27,7 @@ const Login = () => {
     if (loading || sending) {
         return <Loading></Loading>;
     }
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

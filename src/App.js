@@ -8,6 +8,8 @@ import Register from './Components/Login/Register/Register'
 import NavBar from './Components/Shared/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Dashboard from './Components/Dashboard/Dashboard';
+import AddReview from './Components/Dashboard/AddReview/AddReview';
+import MyProfile from './Components/Dashboard/MyProfile/MyProfile';
 function App() {
   return (
     <div>
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="dashboard" element={<Dashboard />} >
+          <Route index element={<MyProfile />}></Route>
+          <Route path="addreview" element={<AddReview />}></Route>
 
 
         </Route>

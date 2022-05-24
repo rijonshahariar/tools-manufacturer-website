@@ -62,7 +62,7 @@ const NavBar = () => {
                         <Nav>
                             {user ? (
                                 <>
-                                    <button onClick={logout} className="btn signoutbtn">
+                                    <button onClick={logout} className="btn btn-sm signoutbtn">
                                         Logout <i className="bi bi-box-arrow-right"></i>
                                     </button>
                                 </>

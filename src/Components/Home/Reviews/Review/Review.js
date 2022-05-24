@@ -2,7 +2,7 @@ import { Rating } from '@mui/material';
 import React from 'react';
 import './Review.css'
 const Review = ({ review }) => {
-    const { name, rvw, rate } = review;
+    const { name, picture, rvw, rate } = review;
     return (
 
         <div className="col ">
@@ -13,8 +13,9 @@ const Review = ({ review }) => {
                 </div>
                 <div className='card-footer border-0'>
                     <Rating name="read-only" value={rate} readOnly />
-                    <h5>{name}</h5>
-
+                    <div className='d-flex align-items-center'>
+                        <h5>{name}</h5>
+                    </div>
                 </div>
             </div>
         </div>

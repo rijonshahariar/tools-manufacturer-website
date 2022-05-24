@@ -10,7 +10,7 @@ const Products = () => {
 
         <div className="mb-5">
             <h1 className="section-title text-center my-5 fw-bold">
-                <span className="d-inline-block">
+                <span className="text-4xl d-inline-block">
                     FEATURED TOOLS
                 </span>
             </h1>
