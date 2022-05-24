@@ -2,19 +2,18 @@ import { Rating } from '@mui/material';
 import React from 'react';
 import './Review.css'
 const Review = ({ review }) => {
-    const { name, picture, rvw, rate } = review;
+    const { name, rvw, rate } = review;
     return (
 
-
-        <div className='card'>
-
-            <div className="reviewcontainer">
-                <div className='caption'>
-                    <img src={picture} alt="" />
-
+        <div className="col ">
+            <div className="card h-100 effect-1">
+                <div className="card-body p-3">
                     <p>{rvw}</p>
+
+                </div>
+                <div className='card-footer border-0'>
                     <Rating name="read-only" value={rate} readOnly />
-                    <h3>{name}</h3>
+                    <h5>{name}</h5>
 
                 </div>
             </div>

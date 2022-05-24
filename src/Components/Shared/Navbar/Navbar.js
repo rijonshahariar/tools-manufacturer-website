@@ -55,15 +55,15 @@ const NavBar = () => {
                             )}
                             <NavLink as={Link}
                                 className={({ isActive }) => (isActive ? "active-link" : "link")}
-                                to="contact">
-                                Contact
+                                to="dashboard">
+                                Dashboard
                             </NavLink>
                         </Nav>
                         <Nav>
                             {user ? (
                                 <>
                                     <button onClick={logout} className="btn signoutbtn">
-                                        Logout <i class="bi bi-box-arrow-right"></i>
+                                        Logout <i className="bi bi-box-arrow-right"></i>
                                     </button>
                                 </>
                             ) : (

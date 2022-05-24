@@ -26,7 +26,7 @@ const Product = ({ product }) => {
                                         <h6 className="font-weight-bold my-2">Min-Order: {product.min_order}</h6>
                                     </div>
                                     <button onClick={handleInventory} className=" btn btn-sm btn-primary">
-                                        <i class="bi bi-cart"></i>  Buy Now
+                                        <i className="bi bi-cart"></i>  Buy Now
                                     </button>
                                 </div><img src={product.img} alt="" width="200" className="mx-auto order-1 order-lg-2" />
                             </div>
