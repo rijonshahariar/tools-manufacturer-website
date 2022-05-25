@@ -29,9 +29,9 @@ const Parts = () => {
         {parts &&
           parts.slice(0, 6).map((part, key) => (
 
-            <div key={key} class="card lg:card-side bg-base-100 shadow-xl">
+            <div key={key} className="card lg:card-side bg-base-100 shadow-xl">
               <figure> <img src={part.img} width={400} height={225} alt="Shoes" /></figure>
-              <div class="card-body">
+              <div className="card-body">
                 <div>
                   <h2 className="card-title pb-3">{part.name}</h2>
                   <p className=" pb-1">{part.desc}</p>

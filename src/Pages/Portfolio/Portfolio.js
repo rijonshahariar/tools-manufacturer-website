@@ -12,7 +12,7 @@ const Portfolio = () => {
             <h5 className='text-primary text-center mb-5 mt-1'>Junior Web Developer</h5>
             <label htmlFor="email">EMAIL</label>
             <h5 className='mb-3'>shahariar.rijon@gmail.com</h5>
-            <h2>EDUCATION</h2>
+            <h2 className="text-primary">EDUCATION</h2>
             <p>2022
               <br />
               Admission Candidate
@@ -27,18 +27,18 @@ const Portfolio = () => {
           </div>
 
           <div className='expertise-container'>
-            <h3 className='text-2xl'>SKILLS</h3>
+            <h3 className='text-2xl text-primary'>SKILLS</h3>
 
             <p className='my-1'>HTML5, CSS3, Bootstrap5, Tailwind, Javascript, ReactJS, MongoDB, NodeJS, and ExpressJS
             </p>
 
 
-            <h3 className='text-2xl mt-4'>KNOW ABOUT</h3>
+            <h3 className='text-2xl mt-4 text-primary'>KNOW ABOUT</h3>
 
             <p className='my-1'>Axios, Python, PHP, Wordpress, Java
             </p>
 
-            <h3 className='text-2xl mt-4 mb-1'>BEST PROJECTS LINK</h3>
+            <h3 className='text-2xl mt-4 mb-1 text-primary'>BEST PROJECTS LINK</h3>
 
             <p><a href="https://carvaly-d931e.web.app/">Cars Warehouse Website</a></p>
             <p><a href="https://phoneforest.netlify.app/">Phone Database Website</a></p>
@@ -52,32 +52,32 @@ const Portfolio = () => {
 
         <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-          <div class="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl">
             <figure><img src="https://i.ibb.co/MB0xxZq/CarValy.png" alt="Shoes" /></figure>
-            <div class="card-body">
-              <h2 class="card-title">Carvaly</h2>
+            <div className="card-body">
+              <h2 className="card-title">Carvaly</h2>
               <p>Warehouse Management Website</p>
-              <div class="card-actions justify-end">
+              <div className="card-actions justify-end">
                 <a className="btn btn-primary" href="https://carvaly-d931e.web.app/">Visit</a>
               </div>
             </div>
           </div>
-          <div class="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl">
             <figure><img src="https://i.ibb.co/L9MDGB9/Phone-Forest.png" alt="Shoes" /></figure>
-            <div class="card-body">
-              <h2 class="card-title">PhoneForest</h2>
+            <div className="card-body">
+              <h2 className="card-title">PhoneForest</h2>
               <p>Phone Details, Price Database</p>
-              <div class="card-actions justify-end">
+              <div className="card-actions justify-end">
                 <a className="btn btn-primary" href="https://phoneforest.netlify.app/">Visit</a>
               </div>
             </div>
           </div>
-          <div class="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl">
             <figure><img src="https://i.ibb.co/166kChc/Onushthan.png" alt="Shoes" /></figure>
-            <div class="card-body">
-              <h2 class="card-title">Onushthan</h2>
+            <div className="card-body">
+              <h2 className="card-title">Onushthan</h2>
               <p>Convention Center Website</p>
-              <div class="card-actions justify-end">
+              <div className="card-actions justify-end">
                 <a className="btn btn-primary" href="https://onushthan.netlify.app/">Visit</a>
               </div>
             </div>

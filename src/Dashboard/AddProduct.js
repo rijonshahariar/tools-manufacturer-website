@@ -165,7 +165,7 @@ const AddProduct = () => {
             )}
           </div>
           <button
-            className={` mt-10 btn btn-primary w-full ${loading && "loading"}`}
+            className={` mt-10 mb-10 btn btn-primary w-full ${loading && "loading"}`}
           >
             {loading ? "" : "add"}
           </button>
