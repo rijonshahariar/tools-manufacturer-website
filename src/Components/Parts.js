@@ -21,27 +21,26 @@ const Parts = () => {
   }
 
   return (
-    <div className=" px-5">
+    <div className=" px-12">
       <h2 className=" text-center text-primary text-4xl mb-5 uppercase">
-        all Parts
+        PRODUCTS
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-rows-1 gap-10">
         {parts &&
           parts.slice(0, 6).map((part, key) => (
-            <div key={key} className="card card-compact  bg-base-200 shadow-xl">
-              <figure>
-                <img src={part.img} width={400} height={225} alt="Shoes" />
-              </figure>
-              <div className="card-body justify-end">
+
+            <div key={key} class="card lg:card-side bg-base-100 shadow-xl">
+              <figure> <img src={part.img} width={400} height={225} alt="Shoes" /></figure>
+              <div class="card-body">
                 <div>
                   <h2 className="card-title pb-3">{part.name}</h2>
                   <p className=" pb-1">{part.desc}</p>
                   <p className=" pb-1">
-                    Price_Per_piece: {part.price_per_piece}
+                    Price: <span className="text-primary">${part.price_per_piece}</span>
                   </p>
                   {/* <p className=" pb-1">min_order_quantity: {part.min_order_quantity}</p> */}
                   <p className=" pb-1">
-                    Availabel_Quantity: {part.available_quantity}
+                    Available Unit: <span className="text-primary">{part.available_quantity}</span>
                   </p>
                   <div className="card-actions justify-end">
                     <button
@@ -56,6 +55,9 @@ const Parts = () => {
                 </div>
               </div>
             </div>
+
+
+
           ))}
       </div>
     </div>

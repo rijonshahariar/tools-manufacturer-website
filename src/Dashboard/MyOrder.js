@@ -67,7 +67,7 @@ const MyOrder = () => {
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Quantity</th>
+              <th>Address</th>
               <th>Total Price</th>
               <th>Status</th>
             </tr>
@@ -78,7 +78,7 @@ const MyOrder = () => {
                 <tr key={key}>
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.partsName}</td>
-                  <td>{item.quantity}</td>
+                  <td>{item.address}</td>
                   <td>{item.price} tk</td>
                   <td>
                     {item.paymentId ? (

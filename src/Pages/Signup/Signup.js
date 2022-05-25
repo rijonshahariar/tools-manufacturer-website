@@ -12,7 +12,7 @@ import useToken from "../../hooks/useToken";
 const Signup = () => {
   // const [authUser] = useAuthState(auth);
   const [createUserWithEmailAndPass, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile] = useUpdateProfile(auth);
   const [token] = useToken(user);
 

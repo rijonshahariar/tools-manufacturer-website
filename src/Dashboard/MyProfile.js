@@ -34,13 +34,14 @@ const MyProfile = () => {
     setLoading(true);
 
     const mobile = event.target.mobile.value;
+    const address = event.target.address.value;
 
     await fetch(`http://localhost:5000/usersByEmail?email=${user.email}`, {
       method: "put",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ mobile }),
+      body: JSON.stringify({ mobile, address }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -65,6 +66,7 @@ const MyProfile = () => {
             <p>Email: {user.email} </p>
             <p>Role: {user.role || "user"} </p>
             <p>Mobile: {user.mobile || "none"} </p>
+            <p>Address: {user.address || "none"} </p>
           </div>
         </div>
         <h3 className=" text-center text-primary text-2xl mt-10 uppercase">
@@ -77,8 +79,9 @@ const MyProfile = () => {
             </label>
             <input
               type="text"
-              value={user.name || "none"}
               disabled
+              value={user.name}
+
               className="input input-bordered input-primary w-full max-w-lg"
             />
           </div>
@@ -99,7 +102,7 @@ const MyProfile = () => {
             </label>
             <input
               type="text"
-              value={user.role}
+              value={user.role || "user"}
               disabled
               className="input input-bordered input-primary w-full max-w-lg"
             />
@@ -118,6 +121,21 @@ const MyProfile = () => {
               className="input input-bordered input-primary w-full max-w-lg"
             />
           </div>
+          <div className="form-control w-full max-w-lg mt-1">
+            <label className="label">
+              <span className="label-text">Address:</span>
+            </label>
+            <input
+              onChange={() => setDisable(false)}
+              required
+              type="text"
+              defaultValue={user.address}
+              name="address"
+              placeholder="Address"
+              className="input input-bordered input-primary w-full max-w-lg"
+            />
+          </div>
+
 
           <button
             disabled={disable}

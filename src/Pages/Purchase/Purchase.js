@@ -79,20 +79,24 @@ const Purchase = () => {
     <div className="flex justify-center px-5 min-h-screen">
       <div>
         <h2 className=" text-center text-primary text-4xl mb-5 uppercase">
-          Purchase here
+          Proceed Checkout
         </h2>
-        <div className="card w-fit bg-base-200 shadow-xl">
+        <div className="card lg:card-side bg-base-100 shadow-xl">
+          <img src={parts.img} className='mx-auto' width={200} height={200} alt='' />
           <div className="card-body">
-            <h2 className=" text-2xl font-bold">Name: {parts.name}</h2>
-            <p>Desc: {parts.desc}</p>
-            <p>Min_Order_Quantity: {parts.min_order_quantity}</p>
-            <p>Availabel_Quantity: {parts.available_quantity}</p>
-            <p>Price_Per_piece: {parts.price_per_piece}</p>
+            <h2 className=" text-2xl font-bold">{parts.name}</h2>
+            <p>{parts.desc}</p>
+            <p>Minimum Order: {parts.min_order_quantity}</p>
+            <p>Available Unit: {parts.available_quantity}</p>
+            <p>Price: ${parts.price_per_piece}</p>
+
           </div>
         </div>
+
+
         <div className="w-full max-w-lg mx-auto">
-          <h2 className=" text-3xl text-primary text-center mt-10 mb-0">
-            Provide Your Information
+          <h2 className=" text-3xl text-primary text-center mt-10 mb-0 uppercase">
+            Provide Information
           </h2>
           <form onSubmit={handleForm}>
             <div className="form-control w-full max-w-lg">
@@ -144,7 +148,7 @@ const Purchase = () => {
                   setDisable(false);
                 }}
                 defaultChecked={parseInt(parts.min_order_quantity)}
-                placeholder={`min Quantity: ${parts.min_order_quantity}`}
+                placeholder={`Minimum Order: ${parts.min_order_quantity} - ${parts.available_quantity}`}
                 // placeholder={`Min Quantity ${parts.min_order_quantity}pcs / Available Quantity ${parts.available_quantity}pcs`}
                 className="input input-bordered input-primary w-full max-w-lg"
               />
@@ -165,7 +169,7 @@ const Purchase = () => {
               className={` btn btn-primary mt-10 w-full ${loading && "loading"
                 }`}
             >
-              {loading ? "" : "Buy now"}
+              {loading ? "" : "Proceed Checkout"}
             </button>
           </form>
         </div>

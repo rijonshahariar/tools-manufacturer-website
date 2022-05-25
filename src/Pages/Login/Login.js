@@ -59,16 +59,17 @@ const Login = () => {
               className="input input-bordered input-primary w-full max-w-lg"
             />
           </div>
+          <br />
           {error && (
             <p className=" mb-5 mt-[-25px] text-red-500">{error.message}</p>
           )}
           <button
             className={` btn btn-primary mt-10 w-full ${loading && "loading"}`}
           >
-            {loading ? "" : "sign up"}
+            {loading ? "" : "Login"}
           </button>
           <p className=" mt-2">
-            New to Ex!m?{" "}
+            New to ArcTools?{" "}
             <Link className=" text-primary" to="/signup">
               Create account.
             </Link>

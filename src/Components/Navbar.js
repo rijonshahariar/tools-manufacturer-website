@@ -1,12 +1,10 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import auth from "../firebase.init";
-
 const Navbar = () => {
   const [authUser] = useAuthState(auth);
-  const navigate = useNavigate();
 
   const navMenuItems = (
     <>
@@ -23,6 +21,11 @@ const Navbar = () => {
         <>
           <li>
             <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+
+            <p>Hi, {authUser?.displayName}</p>
+
           </li>
           <li>
             <p
@@ -77,7 +80,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-            Ex!m
+            ArcTools
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

@@ -65,7 +65,7 @@ const ManageAllorder = () => {
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Quantity</th>
+              <th>User</th>
               <th>Total Price</th>
               <th>Status</th>
             </tr>
@@ -76,7 +76,7 @@ const ManageAllorder = () => {
                 <tr key={key}>
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.partsName}</td>
-                  <td>{item.quantity} pcs</td>
+                  <td>{item.userName}</td>
                   <td>{item.price} tk</td>
                   <td>
                     {item.paymentId ? (

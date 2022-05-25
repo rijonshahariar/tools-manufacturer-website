@@ -11,16 +11,16 @@ const AddReview = () => {
     event.preventDefault();
     setLoading(true);
     const name = authUser.displayName;
-    const rating = event.target.rating.value;
-    const message = event.target.message.value;
+    const rate = event.target.rate.value;
+    const rvw = event.target.rvw.value;
 
     const review = {
       name,
-      rating,
-      message,
+      rate,
+      rvw,
     };
 
-    await fetch(`http://localhost:5000/review`, {
+    await fetch(`http://localhost:5000/reviews`, {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -46,24 +46,24 @@ const AddReview = () => {
         <form onSubmit={handleForm}>
           <div className="form-control w-full max-w-lg mt-1">
             <label className="label">
-              <span className="label-text">Rating:</span>
+              <span className="label-text">Rate:</span>
             </label>
             <input
               required
               type="number"
-              name="rating"
-              placeholder="between 0 to 5"
+              name="rate"
+              placeholder="Between 1 to 5"
               className="input input-bordered input-primary w-full max-w-lg"
             />
           </div>
           <div className="form-control w-full max-w-lg mt-1">
             <label className="label">
-              <span className="label-text">Short Message:</span>
+              <span className="label-text">Short Review:</span>
             </label>
             <input
               required
               type="text"
-              name="message"
+              name="rvw"
               className="input input-bordered input-primary w-full max-w-lg"
             />
           </div>

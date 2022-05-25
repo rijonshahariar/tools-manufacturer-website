@@ -24,9 +24,9 @@ import AdminRestriction from "./Authentication/AdminRestriction";
 
 function App() {
   return (
-    <div className=" lg:max-w-7xl mx-auto">
+    <div className=" lg:max-w-full mx-auto">
       <Navbar />
-      <div className=" pt-16">
+      <div className=" ">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
