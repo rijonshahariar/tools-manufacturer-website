@@ -67,7 +67,9 @@ const ManageAllorder = () => {
               <th>Name</th>
               <th>User</th>
               <th>Total Price</th>
+              <th>Payment ID</th>
               <th>Status</th>
+
             </tr>
           </thead>
           <tbody>
@@ -81,12 +83,22 @@ const ManageAllorder = () => {
                   <td>
                     {item.paymentId ? (
                       <>
-                        <p className=" text-success">Paid</p>{" "}
                         <small className="text-primary">{item.paymentId}</small>
                       </>
                     ) : (
                       <>
+                        <p className=" text-error">Unpaid</p>{" "}
 
+                      </>
+                    )}
+                  </td>
+                  <td>
+                    {item.paymentId ? (
+                      <>
+                        <p className=" text-success">Paid</p>{" "}
+                      </>
+                    ) : (
+                      <>
                         <label
                           htmlFor="confirmation-modal"
                           onClick={() => {
