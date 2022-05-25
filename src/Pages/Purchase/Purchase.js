@@ -55,7 +55,7 @@ const Purchase = () => {
           if (data.insertedId) {
             event.target.reset();
             toast.success(
-              `Item Purchased Successfull. Please pay for confirm order`
+              `Order placed. Please pay for confirm order`
             );
             navigate("/dashboard/my-order");
           }
@@ -63,7 +63,7 @@ const Purchase = () => {
     }
     else {
       setDisable(false);
-      toast.error("You have to place order in our given range");
+      toast.error("Order should be in given range");
     }
 
     setLoading(false);
@@ -76,7 +76,7 @@ const Purchase = () => {
   return (
     <div className="flex justify-center px-5 min-h-screen">
       <div>
-        <h2 className=" text-center text-primary text-4xl mb-5 uppercase">
+        <h2 className=" text-center text-primary mt-5 text-4xl mb-5 uppercase">
           Proceed Checkout
         </h2>
         <div className="card lg:card-side bg-base-100 shadow-xl">
