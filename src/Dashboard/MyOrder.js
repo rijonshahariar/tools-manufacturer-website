@@ -79,7 +79,7 @@ const MyOrder = () => {
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.partsName}</td>
                   <td>{item.address}</td>
-                  <td>{item.price} tk</td>
+                  <td>${item.price}</td>
                   <td>
                     {item.paymentId ? (
                       <>

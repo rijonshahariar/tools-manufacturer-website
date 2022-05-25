@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -28,9 +27,7 @@ const CheckoutForm = ({ clientSecret, item }) => {
     if (error) {
       console.log(error.message);
     }
-    // else {
-    //   console.log(paymentMethod);
-    // }
+
     const { paymentIntent, error: paymentError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -70,7 +67,7 @@ const CheckoutForm = ({ clientSecret, item }) => {
         options={{
           style: {
             base: {
-              fontSize: "16px",
+              fontSize: "17px",
               color: "#424770",
               "::placeholder": {
                 color: "#aab7c4",

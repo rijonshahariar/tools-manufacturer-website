@@ -1,22 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialSignup from "../../Components/SocialSignup";
 import {
   useAuthState,
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import useToken from "../../hooks/useToken";
+import { toast } from "react-toastify";
 
 const Login = () => {
   // const [authUser] = useAuthState(auth);
   const [emailAndPassLogin, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [token] = useToken(user);
-
+  const emailRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   const handleForm = async (event) => {
     event.preventDefault();
@@ -24,6 +27,16 @@ const Login = () => {
     const pass = event.target.pass.value;
 
     await emailAndPassLogin(email, pass);
+  };
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast.success("Email Sent. Please check!");
+    } else {
+      toast("Please input your email");
+    }
   };
 
   useEffect(() => {
@@ -44,6 +57,7 @@ const Login = () => {
             <input
               required
               type="email"
+              ref={emailRef}
               name="email"
               className="input input-bordered input-primary w-full max-w-lg"
             />
@@ -68,12 +82,15 @@ const Login = () => {
           >
             {loading ? "" : "Login"}
           </button>
-          <p className=" mt-2">
-            New to ArcTools?{" "}
-            <Link className=" text-primary" to="/signup">
-              Create account.
-            </Link>
-          </p>
+          <div>
+            <p className=" mt-2">
+              New to ArcTools?{" "}
+              <Link className=" text-primary" to="/signup">
+                Create account.
+              </Link>
+            </p>
+            <p>Forget Password?<button className='btn-link btn pe-auto' onClick={resetPassword}>Reset Password</button> </p>
+          </div>
         </form>
         <SocialSignup />
       </div>

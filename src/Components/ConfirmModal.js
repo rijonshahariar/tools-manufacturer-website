@@ -3,12 +3,6 @@ import React from "react";
 const ConfirmModal = ({ handleDelete, setModal }) => {
   return (
     <div>
-      {/* <!-- The button to open modal --> */}
-      {/* <label for="confirmation-modal" className="btn modal-button">
-        open modal
-      </label> */}
-
-      {/* <!-- Put this part before </body> tag --> */}
       <input type="checkbox" id="confirmation-modal" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative p-10">
@@ -36,7 +30,7 @@ const ConfirmModal = ({ handleDelete, setModal }) => {
               }}
               className="btn btn-sm btn-success text-white"
             >
-              no
+              No
             </button>
           </div>
         </div>

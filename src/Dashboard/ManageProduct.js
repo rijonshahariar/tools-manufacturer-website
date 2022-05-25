@@ -58,7 +58,7 @@ const ManageProduct = () => {
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.name}</td>
                   <td>{item.available_quantity} pcs</td>
-                  <td>$ {item.price_per_piece}</td>
+                  <td>${item.price_per_piece}</td>
                   <td>
                     <label
                       htmlFor="confirmation-modal"
@@ -66,7 +66,7 @@ const ManageProduct = () => {
                         setModal(true);
                         setDeleteId(item._id);
                       }}
-                      className="btn btn-error btn-xs text-white"
+                      className="btn btn-primary btn-xs text-white"
                     >
                       Delete
                     </label>

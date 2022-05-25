@@ -2,35 +2,16 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase.init";
-import Loading from "../Components/Loading";
-import { useQuery } from "react-query";
-import { toast } from "react-toastify";
 import useAdmin from "../hooks/useAdmin";
+import Loading from "../Components/Loading";
 
 const Dashboard = () => {
   const [authUser] = useAuthState(auth);
   const [isAdmin, loading] = useAdmin(authUser);
 
   if (loading) {
-    return;
+    return <Loading></Loading>;
   }
-
-  // const {
-  //   data: user,
-  //   isLoading,
-  //   error,
-  // } = useQuery(["usersByEmail", authUser?.email], () =>
-  //   fetch(
-  //     `https://arctoolsbd.herokuapp.com/usersByEmail?email=${authUser?.email}`
-  //   ).then((res) => res.json())
-  // );
-
-  // if (error) {
-  //   toast.error(error.message);
-  // }
-  // if (isLoading) {
-  //   return <Loading />;
-  // }
 
   return (
     <div className="px-5">
@@ -49,7 +30,7 @@ const Dashboard = () => {
             {isAdmin || (
               <>
                 <li>
-                  <Link to="/dashboard/my-order">My Order</Link>
+                  <Link to="/dashboard/my-order">My Orders</Link>
                 </li>
                 <li>
                   <Link to="/dashboard/add-review">Add Review</Link>

@@ -3,7 +3,7 @@ import React from 'react';
 const Services = () => {
     return (
         <div className='px-12'>
-            <h2 className=" text-center font-bold text-primary my-8 text-4xl uppercase">
+            <h2 className=" text-center font-bold text-primary my-8 text-5xl uppercase">
                 BUSINESS SUMMERY
             </h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>

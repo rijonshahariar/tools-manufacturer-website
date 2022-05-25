@@ -59,7 +59,7 @@ const ManageAllorder = () => {
       <h2 className=" text-center text-primary text-4xl mb-5 uppercase">
         Manage all order
       </h2>
-      <div className="overflow-x-auto w-full">
+      <div className="mb-10 overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
             <tr>
@@ -77,30 +77,23 @@ const ManageAllorder = () => {
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.partsName}</td>
                   <td>{item.userName}</td>
-                  <td>{item.price} tk</td>
+                  <td>${item.price}</td>
                   <td>
                     {item.paymentId ? (
                       <>
                         <p className=" text-success">Paid</p>{" "}
-                        <small>{item.paymentId}</small>
+                        <small className="text-primary">{item.paymentId}</small>
                       </>
                     ) : (
                       <>
-                        {/* <button
-                          onClick={() => {
-                            navigate(`/dashboard/payment/${item._id}`);
-                          }}
-                          className="btn btn-success btn-xs text-white mr-5"
-                        >
-                          Pay
-                        </button> */}
+
                         <label
                           htmlFor="confirmation-modal"
                           onClick={() => {
                             setModal(true);
                             setDeleteId(item._id);
                           }}
-                          className="btn btn-error btn-xs text-white"
+                          className="btn btn-primary btn-xs text-white"
                         >
                           Delete
                         </label>

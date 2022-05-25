@@ -34,7 +34,6 @@ const MakeAdmin = () => {
 
   const handleAdmin = (answer) => {
     if (answer) {
-      // console.log(makeAdminId);
       fetch(`https://arctoolsbd.herokuapp.com/usersById?id=${makeAdminId}`, {
         method: "put",
         headers: {
@@ -43,7 +42,6 @@ const MakeAdmin = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
           if (data.acknowledged) {
             refetch();
           }

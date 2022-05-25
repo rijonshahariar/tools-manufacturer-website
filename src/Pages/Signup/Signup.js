@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import SocialSignup from "../../Components/SocialSignup";
 import {
-  useAuthState,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
@@ -10,7 +9,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
 
 const Signup = () => {
-  // const [authUser] = useAuthState(auth);
   const [createUserWithEmailAndPass, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile] = useUpdateProfile(auth);
@@ -37,6 +35,7 @@ const Signup = () => {
   }, [token, from, navigate]);
 
   return (
+
     <div className="flex justify-center min-h-screen">
       <div className=" absolute top-20 w-full max-w-lg">
         <h2 className=" text-4xl text-primary text-center my-10">Signup</h2>
@@ -90,6 +89,7 @@ const Signup = () => {
         <SocialSignup />
       </div>
     </div>
+
   );
 };
 

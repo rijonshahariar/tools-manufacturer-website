@@ -5,7 +5,7 @@ import auth from "../firebase.init";
 import useToken from "../hooks/useToken";
 
 const SocialSignup = () => {
-  const [gooleSignIn, user, loading, error] = useSignInWithGoogle(auth);
+  const [googleSignIn, user, loading, error] = useSignInWithGoogle(auth);
   const [token] = useToken(user);
 
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const SocialSignup = () => {
   const from = location?.state?.from?.pathname || "/";
 
   const handleSignIn = () => {
-    gooleSignIn();
+    googleSignIn();
   };
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const SocialSignup = () => {
 
   return (
     <>
-      <div className="flex flex-col w-1/2 mx-auto my-5 border-opacity-50">
+      <div className="flex flex-col w-1/2 mx-auto mt-1 border-opacity-50">
         <div className="divider">OR</div>
       </div>
 
@@ -33,9 +33,9 @@ const SocialSignup = () => {
       )}
       <button
         onClick={handleSignIn}
-        className={` btn btn-outline btn-error ${loading && "loading"}  w-full`}
+        className={` btn btn-outline btn-primary ${loading && "loading"}  w-full`}
       >
-        {loading ? "" : "Google Signup"}
+        {loading ? "" : "Continue with Google"}
       </button>
     </>
   );

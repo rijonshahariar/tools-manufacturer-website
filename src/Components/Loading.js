@@ -1,7 +1,11 @@
 import React from "react";
 
 const Loading = () => {
-  return <h2 className=" text-white flex justify-center mt-60">Loading...</h2>;
+  return (
+    <div className="flex items-center justify-center ">
+      <div className="w-16 h-16 border-b-2 border-indigo-900 rounded-full animate-spin"></div>
+    </div>
+  );
 };
 
 export default Loading;

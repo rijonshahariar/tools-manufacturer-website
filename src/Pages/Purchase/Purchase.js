@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
@@ -43,7 +42,6 @@ const Purchase = () => {
         mobile,
         address,
       };
-      // console.log(paymentData);
 
       await fetch(`https://arctoolsbd.herokuapp.com/purchase`, {
         method: "post",
@@ -149,7 +147,6 @@ const Purchase = () => {
                 }}
                 defaultChecked={parseInt(parts.min_order_quantity)}
                 placeholder={`Minimum Order: ${parts.min_order_quantity} - ${parts.available_quantity}`}
-                // placeholder={`Min Quantity ${parts.min_order_quantity}pcs / Available Quantity ${parts.available_quantity}pcs`}
                 className="input input-bordered input-primary w-full max-w-lg"
               />
             </div>

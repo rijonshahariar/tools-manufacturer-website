@@ -3,11 +3,11 @@ import React from 'react';
 const Contact = () => {
     return (
 
-        <section className="bg-accent" >
+        <section className="bg-primary" >
             <div className='bg-primary px-10 py-14 '>
                 <div className='text-center pb-14 text-white'>
 
-                    <h1 className='text-4xl font-bold mt-3'>Stay connected with us</h1>
+                    <h1 className='text-4xl font-bold mt-3'>Stay Connected With Us</h1>
                 </div>
                 <div className='grid grid-cols-1 justify-items-center gap-5'>
                     <input

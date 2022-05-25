@@ -1,5 +1,4 @@
 import React from 'react';
-import bgg from '../Assets/bggg.png'
 const Offers = () => {
     return (
         <div>
