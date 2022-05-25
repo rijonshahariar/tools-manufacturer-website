@@ -29,7 +29,7 @@ const Navbar = () => {
           </li>
           <li>
             <p
-              className=" font-bold text-secondary"
+              className=" font-bold text-primary"
               onClick={() => {
                 signOut(auth);
                 localStorage.removeItem("accessToken");

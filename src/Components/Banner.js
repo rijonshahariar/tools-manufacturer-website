@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">ArcTools BD</h1>
           <p className="mb-5">Trusted Tools & Parts Manufacturer in Bangladesh. We specialize in cost reductions through vending solutions. We offer a vending solution tailored to the customer product acquisition strategy.</p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary  btn-wide">Get Started</button>
         </div>
       </div>
     </div>

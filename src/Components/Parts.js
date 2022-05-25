@@ -22,7 +22,7 @@ const Parts = () => {
 
   return (
     <div className=" px-12">
-      <h2 className=" text-center text-primary text-4xl mb-5 uppercase">
+      <h2 className=" text-center font-bold text-primary text-4xl mb-5 uppercase">
         PRODUCTS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-rows-1 gap-10">
