@@ -1,30 +1,94 @@
 import React from "react";
-
+import './Portfolio.css'
 const Portfolio = () => {
   return (
-    <div className=" flex justify-center min-h-screen ">
-      <div className=" absolute top-1/3">
-        <div className=" lg:w-fit w-screen bg-base-200 shadow-xl rounded-xl">
-          <div className="flex">
-            <div className=" p-3 lg:p-10 flex-1">
-              <h2 className=" lg:text-xl">Name: </h2>
-              <h2 className=" lg:text-xl">Email:</h2>
-              <h2 className=" lg:text-xl">Educational Background:</h2>
-            </div>
-            <div className=" p-3 lg:p-10 flex-1">
-              <h2 className=" lg:text-xl">Moniruzzaman </h2>
-              <h2 className=" lg:text-xl">moniruzzaman.shakib.1@gmail.com</h2>
-              <h2 className=" lg:text-xl">
-                Student of Electrical and Electronic Engineering
-                <br />
-                level-2 semester-I
-              </h2>
+    <div className='profile-section bg-primary'>
+      <div className='profile-container'>
+
+
+        <div className='profile-content'>
+          <div className='know-me'>
+            <h3 className='text-2xl text-center'>Shahariar Rijon</h3>
+            <h5 className='text-primary text-center mb-5 mt-1'>Junior Web Developer</h5>
+            <label htmlFor="email">EMAIL</label>
+            <h5 className='mb-3'>shahariar.rijon@gmail.com</h5>
+            <h2>EDUCATION</h2>
+            <p>2022
+              <br />
+              Admission Candidate
+            </p>
+            <p className='my-3'>
+              HSC (2021)
+              <br />
+              Science
+              <br />
+              Chittagong University College
+            </p>
+          </div>
+
+          <div className='expertise-container'>
+            <h3 className='text-2xl'>SKILLS</h3>
+
+            <p className='my-1'>HTML5, CSS3, Bootstrap5, Tailwind, Javascript, ReactJS, MongoDB, NodeJS, and ExpressJS
+            </p>
+
+
+            <h3 className='text-2xl mt-4'>KNOW ABOUT</h3>
+
+            <p className='my-1'>Axios, Python, PHP, Wordpress, Java
+            </p>
+
+            <h3 className='text-2xl mt-4 mb-1'>BEST PROJECTS LINK</h3>
+
+            <p><a href="https://carvaly-d931e.web.app/">Cars Warehouse Website</a></p>
+            <p><a href="https://phoneforest.netlify.app/">Phone Database Website</a></p>
+            <p><a href="https://onushthan.netlify.app/">Convention Center Website</a></p>
+          </div>
+        </div>
+
+        <h2 className=" text-center mt-5 font-bold text-primary text-4xl mb-5 uppercase">
+          PROJECTS IMAGE
+        </h2>
+
+        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="https://i.ibb.co/MB0xxZq/CarValy.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Carvaly</h2>
+              <p>Warehouse Management Website</p>
+              <div class="card-actions justify-end">
+                <a className="btn btn-primary" href="https://carvaly-d931e.web.app/">Visit</a>
+              </div>
             </div>
           </div>
-          <div className="text-center">live site link</div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="https://i.ibb.co/L9MDGB9/Phone-Forest.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">PhoneForest</h2>
+              <p>Phone Details, Price Database</p>
+              <div class="card-actions justify-end">
+                <a className="btn btn-primary" href="https://phoneforest.netlify.app/">Visit</a>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="https://i.ibb.co/166kChc/Onushthan.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Onushthan</h2>
+              <p>Convention Center Website</p>
+              <div class="card-actions justify-end">
+                <a className="btn btn-primary" href="https://onushthan.netlify.app/">Visit</a>
+              </div>
+            </div>
+          </div>
+
+
         </div>
+
       </div>
-    </div>
+
+    </div >
   );
 };
 

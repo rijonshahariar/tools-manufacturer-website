@@ -4,7 +4,7 @@ const Contact = () => {
     return (
 
         <section className="bg-accent" >
-            <div className='bg-primary px-10 py-14 ' style={{ backgroundImage: "url(" + "https://mixkit.imgix.net/videos/preview/mixkit-animation-of-purple-background-and-white-triangles-99548-0.jpg?q=80&auto=format%2Ccompress" + ")" }}>
+            <div className='bg-primary px-10 py-14 '>
                 <div className='text-center pb-14 text-white'>
 
                     <h1 className='text-4xl font-bold mt-3'>Stay connected with us</h1>

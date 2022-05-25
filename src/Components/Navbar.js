@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link to="/blog">Blog</Link>
       </li>
       <li>
-        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/portfolio">My Portfolio</Link>
       </li>
       {authUser ? (
         <>
