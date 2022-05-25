@@ -15,7 +15,7 @@ const Purchase = () => {
   const { partsId } = useParams();
   const navigate = useNavigate();
   const { data: parts, isLoading } = useQuery("partsById", () =>
-    fetch(`http://localhost:5000/partsById?id=${partsId}`).then((res) =>
+    fetch(`https://arctoolsbd.herokuapp.com/partsById?id=${partsId}`).then((res) =>
       res.json()
     )
   );
@@ -45,7 +45,7 @@ const Purchase = () => {
       };
       // console.log(paymentData);
 
-      await fetch(`http://localhost:5000/purchase`, {
+      await fetch(`https://arctoolsbd.herokuapp.com/purchase`, {
         method: "post",
         headers: {
           "content-type": "application/json",
@@ -166,7 +166,7 @@ const Purchase = () => {
             </div>
             <button
               disabled={disable}
-              className={` btn btn-primary mt-10 w-full ${loading && "loading"
+              className={` btn btn-primary mb-10 mt-10 w-full ${loading && "loading"
                 }`}
             >
               {loading ? "" : "Proceed Checkout"}

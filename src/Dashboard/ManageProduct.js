@@ -11,12 +11,12 @@ const ManageProduct = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch(`http://localhost:5000/parts`).then((res) => res.json())
+    fetch(`https://arctoolsbd.herokuapp.com/parts`).then((res) => res.json())
   );
 
   const handleDelete = (answer) => {
     if (answer) {
-      fetch(`http://localhost:5000/partsById?id=${deleteId}`, {
+      fetch(`https://arctoolsbd.herokuapp.com/partsById?id=${deleteId}`, {
         method: "delete",
         headers: {
           "content-type": "application/json",
@@ -58,7 +58,7 @@ const ManageProduct = () => {
                   <th>{key + 1}</th>
                   <td className=" capitalize">{item.name}</td>
                   <td>{item.available_quantity} pcs</td>
-                  <td>{item.price_per_piece} tk</td>
+                  <td>$ {item.price_per_piece}</td>
                   <td>
                     <label
                       htmlFor="confirmation-modal"

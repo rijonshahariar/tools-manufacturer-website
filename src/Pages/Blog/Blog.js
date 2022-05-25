@@ -10,9 +10,9 @@ const Blog = () => {
       <div className=" flex justify-center">
 
         <div className=" w-full px-5">
-          <div class="card bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">
+          <div className="card bg-base-100 shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">
                 1. How will you improve the performance of a React Application?
               </h2>
               <p className=" mb-10">

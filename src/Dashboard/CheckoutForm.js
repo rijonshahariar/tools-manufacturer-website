@@ -45,7 +45,7 @@ const CheckoutForm = ({ clientSecret, item }) => {
       console.log(paymentError.message);
     } else {
       if (paymentIntent.id) {
-        await fetch(`http://localhost:5000/purchaseById/${item._id}`, {
+        await fetch(`https://arctoolsbd.herokuapp.com/purchaseById/${item._id}`, {
           method: "put",
           headers: {
             "content-type": "application/json",

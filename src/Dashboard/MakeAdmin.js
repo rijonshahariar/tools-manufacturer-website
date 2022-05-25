@@ -16,7 +16,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery(["user"], () =>
-    fetch(`http://localhost:5000/users`, {
+    fetch(`https://arctoolsbd.herokuapp.com/users`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -35,7 +35,7 @@ const MakeAdmin = () => {
   const handleAdmin = (answer) => {
     if (answer) {
       // console.log(makeAdminId);
-      fetch(`http://localhost:5000/usersById?id=${makeAdminId}`, {
+      fetch(`https://arctoolsbd.herokuapp.com/usersById?id=${makeAdminId}`, {
         method: "put",
         headers: {
           "content-type": "application/json",

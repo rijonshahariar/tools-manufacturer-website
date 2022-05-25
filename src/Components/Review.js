@@ -9,7 +9,7 @@ const Review = () => {
     isLoading,
     error,
   } = useQuery("reviews", () =>
-    fetch(`http://localhost:5000/reviews`).then((res) => res.json())
+    fetch(`https://arctoolsbd.herokuapp.com/reviews`).then((res) => res.json())
   );
   if (error) {
     toast.error(error.message);

@@ -18,7 +18,7 @@ const ManageAllorder = () => {
     isLoading,
     refetch,
   } = useQuery(["manageallorder", authUser], () =>
-    fetch(`http://localhost:5000/purchase`, {
+    fetch(`https://arctoolsbd.herokuapp.com/purchase`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -35,7 +35,7 @@ const ManageAllorder = () => {
   );
   const handleDelete = (answer) => {
     if (answer) {
-      fetch(`http://localhost:5000/purchaseById/${deleteId}`, {
+      fetch(`https://arctoolsbd.herokuapp.com/purchaseById/${deleteId}`, {
         method: "delete",
         headers: {
           "content-type": "application/json",

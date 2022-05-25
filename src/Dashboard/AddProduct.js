@@ -42,7 +42,7 @@ const AddProduct = () => {
             price_per_piece,
           };
 
-          fetch(`http://localhost:5000/parts`, {
+          fetch(`https://arctoolsbd.herokuapp.com/parts`, {
             method: "post",
             headers: {
               "content-type": "application/json",

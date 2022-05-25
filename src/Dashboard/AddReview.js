@@ -20,7 +20,7 @@ const AddReview = () => {
       rvw,
     };
 
-    await fetch(`http://localhost:5000/reviews`, {
+    await fetch(`https://arctoolsbd.herokuapp.com/reviews`, {
       method: "post",
       headers: {
         "content-type": "application/json",

@@ -21,6 +21,7 @@ import MakeAdmin from "./Dashboard/MakeAdmin";
 import ManageProduct from "./Dashboard/ManageProduct";
 import RequireAdmin from "./Authentication/RequireAdmin";
 import AdminRestriction from "./Authentication/AdminRestriction";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/portfolio" element={<Portfolio />}></Route>
           <Route

@@ -8,7 +8,7 @@ const useAdmin = (authUser) => {
   useState(() => {
     const email = authUser?.email;
     if (email) {
-      fetch(`http://localhost:5000/usersByEmail?email=${email}`)
+      fetch(`https://arctoolsbd.herokuapp.com/usersByEmail?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.role === "admin") {

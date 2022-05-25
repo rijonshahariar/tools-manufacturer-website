@@ -18,7 +18,7 @@ const MyProfile = () => {
     refetch,
   } = useQuery(["updateUserInfo", authUser?.email], () =>
     fetch(
-      `http://localhost:5000/usersByEmail?email=${authUser?.email}`
+      `https://arctoolsbd.herokuapp.com/usersByEmail?email=${authUser?.email}`
     ).then((res) => res.json())
   );
 
@@ -36,7 +36,7 @@ const MyProfile = () => {
     const mobile = event.target.mobile.value;
     const address = event.target.address.value;
 
-    await fetch(`http://localhost:5000/usersByEmail?email=${user.email}`, {
+    await fetch(`https://arctoolsbd.herokuapp.com/usersByEmail?email=${user.email}`, {
       method: "put",
       headers: {
         "content-type": "application/json",
@@ -139,7 +139,7 @@ const MyProfile = () => {
 
           <button
             disabled={disable}
-            className={` btn btn-primary w-full mt-10 ${loading && "loading"}`}
+            className={` btn btn-primary w-full mb-20 mt-10 ${loading && "loading"}`}
           >
             {loading ? "" : "Update"}
           </button>

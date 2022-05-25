@@ -21,7 +21,7 @@ const Dashboard = () => {
   //   error,
   // } = useQuery(["usersByEmail", authUser?.email], () =>
   //   fetch(
-  //     `http://localhost:5000/usersByEmail?email=${authUser?.email}`
+  //     `https://arctoolsbd.herokuapp.com/usersByEmail?email=${authUser?.email}`
   //   ).then((res) => res.json())
   // );
 
@@ -37,12 +37,7 @@ const Dashboard = () => {
       <div className="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content mt-10 lg:mt-16">
-          <label
-            htmlFor="my-drawer-2"
-            className="btn btn-sm btn-primary drawer-button  lg:hidden flex mb-5"
-          >
-            Open Sidebar
-          </label>
+
           <Outlet />
         </div>
         <div className="drawer-side">
