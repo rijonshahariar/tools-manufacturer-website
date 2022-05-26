@@ -50,6 +50,17 @@ const Services = () => {
 
                     </div>
                 </div>
+
+            </div>
+            <div className=' mx-auto shadow-2xl mt-8 p-6 lg:flex justify-between items-center'>
+                <div className='lg:w-3/4'>
+                    <h1 className='text-4xl mb-2 text-primary'>Have any question about us or get a product request?</h1>
+                    <p className='text-xl text-blue-900'>Don't hesitated to Contact us</p>
+                </div>
+                <div className='flex'>
+                    <button className="btn mr-4 rounded-lg bg-primary border-0 btn-xs sm:btn-sm md:btn-md lg:btn-md">Request For Quote</button>
+                    <button className="btn mr-4  rounded-lg bg-blue-900 btn-xs border-0 sm:btn-sm md:btn-md lg:btn-md">Contact Us</button>
+                </div>
             </div>
         </div>
     );

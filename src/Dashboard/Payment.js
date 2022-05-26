@@ -31,8 +31,6 @@ const Payment = () => {
         .then((data) => {
           if (data.clientSecret) {
             setClientSecret(data.clientSecret);
-          } else {
-            toast.error("Amount Limit Crossed. Limit: 9,999.99/-");
           }
         });
     }

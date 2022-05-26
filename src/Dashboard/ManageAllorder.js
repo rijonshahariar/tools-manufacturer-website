@@ -12,6 +12,7 @@ const ManageAllorder = () => {
   const [authUser] = useAuthState(auth);
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
+
   const [deleteId, setDeleteId] = useState("");
   const {
     data: purchasedItems,
@@ -50,6 +51,22 @@ const ManageAllorder = () => {
     }
   };
 
+  const handleDelivery = (id) => {
+
+    fetch(`https://arctoolsbd.herokuapp.com/purchaseById/${id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        refetch()
+        toast.success('Item Delivered')
+      })
+  }
+
   if (isLoading) {
     return <Loading />;
   }
@@ -83,6 +100,7 @@ const ManageAllorder = () => {
                   <td>
                     {item.paymentId ? (
                       <>
+                        <p className=" text-success">Paid</p>{" "}
                         <small className="text-primary">{item.paymentId}</small>
                       </>
                     ) : (
@@ -95,7 +113,19 @@ const ManageAllorder = () => {
                   <td>
                     {item.paymentId ? (
                       <>
-                        <p className=" text-success">Paid</p>{" "}
+                        {item.status === "delivered" ? (
+                          "Delivered"
+                        ) : (
+                          <label
+                            htmlFor="confirmation-modal"
+                            onClick={() => {
+                              handleDelivery(item._id);
+                            }}
+                            className="btn btn-error btn-xs text-white"
+                          >
+                            PENDING
+                          </label>
+                        )}
                       </>
                     ) : (
                       <>
@@ -111,6 +141,8 @@ const ManageAllorder = () => {
                         </label>
                       </>
                     )}
+
+
                   </td>
                 </tr>
               ))}
