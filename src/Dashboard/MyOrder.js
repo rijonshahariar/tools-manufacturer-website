@@ -70,6 +70,7 @@ const MyOrder = () => {
 
               <th>Total Price</th>
               <th>Status</th>
+              <th>Delivery</th>
             </tr>
           </thead>
           <tbody>
@@ -95,17 +96,35 @@ const MyOrder = () => {
                         >
                           Pay
                         </button>
-                        <label
-                          htmlFor="confirmation-modal"
-                          onClick={() => {
-                            setModal(true);
-                            setDeleteId(item._id);
-                          }}
-                          className="btn btn-error btn-xs text-white"
-                        >
-                          Cancel
-                        </label>
+
                       </>
+                    )}
+                  </td>
+                  <td>
+                    {item.paymentId ? (
+                      <>
+                        {item.status ? (
+                          <>
+                            <p className=" text-success">Delivered</p>{" "}
+                          </>
+                        ) : (
+                          <>
+                            <p className=" text-error">Pending</p>{" "}
+                          </>
+
+                        )}
+                      </>
+                    ) : (
+                      <label
+                        htmlFor="confirmation-modal"
+                        onClick={() => {
+                          setModal(true);
+                          setDeleteId(item._id);
+                        }}
+                        className="btn btn-error btn-xs text-white"
+                      >
+                        Cancel
+                      </label>
                     )}
                   </td>
                 </tr>
