@@ -53,7 +53,7 @@ const ManageAllorder = () => {
 
   const handleDelivery = (id) => {
 
-    fetch(`https://arctoolsbd.herokuapp.com/purchaseById/${id}`, {
+    fetch(`https://arctoolsbd.herokuapp.com/productShip/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
